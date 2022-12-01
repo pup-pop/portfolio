@@ -1,0 +1,61 @@
+body{
+    background-image: url(image/kikagaku.png);
+    background-repeat: repeat;
+    background-size: 200px;
+}
+
+.content{
+    margin: 0 auto;
+    min-width: 380px;
+    width: 80%;
+    background-color: #ffffff;
+    height: 100%;
+}
+
+h1{
+    text-align: right;
+}
+
+#nav {
+  list-style: none;
+  text-align: right;
+}
+ 
+#nav li {
+  width: 140px;
+  text-align: center;
+  display: inline-block;
+  border-left: 1px solid;
+}
+ 
+#nav li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.coffee{
+    position: relative;
+    left: 20%;
+}
+
+.magcup{
+    position: absolute;
+    width: 70%;
+    max-width:600px;
+}
+
+.hamon{
+    position: absolute;
+    animation: yurayura 8s infinite;
+    width: 70%;
+    max-width:600px;
+}
+
+@keyframes yurayura{
+    25% {
+        transform: scaleX(0.9);
+    }
+    75% {
+        transform: scaleX(1.1);
+    }
+}
