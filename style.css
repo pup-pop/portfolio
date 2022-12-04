@@ -1,19 +1,21 @@
-body{
-    background-image: url(image/kikagaku.jpg);
-    background-repeat: repeat;
-    background-size: 200px;
+body {
+  background-image: url(image/kikagaku.jpg);
+  background-repeat: repeat;
+  background-size: 200px;
 }
 
-.content{
-    margin: 0 auto;
-    min-width: 380px;
-    width: 80%;
-    background-color: #ffffff;
-    height: 100%;
+.content {
+  margin: 0 auto;
+  min-width: 600px;
+  max-width: 1400px;
+  width: 80%;
+  height: 880px;
+  background-color: #ffffff;
 }
 
-h1{
-    text-align: right;
+h1 {
+  padding-left: 15px;
+  padding-top: 10px;
 }
 
 #nav {
@@ -22,40 +24,210 @@ h1{
 }
  
 #nav li {
-  width: 140px;
+  width: 160px;
   text-align: center;
   display: inline-block;
-  border-left: 1px solid;
+}
+
+.border {
+  border-right: 1px solid;
 }
  
 #nav li a {
   text-decoration: none;
+  color: #a9a9a9;
+  position: relative;
+  display: inline-block;
+}
+
+#nav li a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: #333;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+
+#nav li a:hover {
+  color: #000;
+}
+
+#nav li a:hover::after {
+  transform: scale(1, 1);
+}
+
+hr {
+  width: 90%;
+  color: #c0c8c0;
+}
+
+.coffee {
+  position: relative;
+  left: 20%;
+}
+
+.magcup {
+  position: absolute;
+  width: 70%;
+  max-width:600px;
+}
+
+.hamon {
+  position: absolute;
+  animation: yurayura 8s infinite;
+  width: 70%;
+  max-width:600px;
+}
+
+@keyframes yurayura {
+  25% {
+    transform: scaleX(0.9);
+  }
+  75% {
+    transform: scaleX(1.1);
+  }
+}
+
+.remarks {
+  margin: 600px auto 15px auto;
+  width: 60%;
+}
+
+.party-gradient {
+  display: inline-block;
+  background: linear-gradient(180deg, #00a1e9 0%, #3cb37a 50%, #fff352 100%);
+  background: -webkit-linear-gradient(-90deg, #00a1e9 0%, #3cb37a 50%, #fff352 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.introduction {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  min-width: 600px;
+  max-width: 1400px;
+  width: 80%;
+  background-color: #ffffff;
+}
+
+.skill-graph {
+  margin: 10px 20px;
+}
+
+.skill-type {
   font-weight: bold;
+  font-style: italic;
+  font-size: 1.5em;
+  text-decoration: underline solid #000;
 }
 
-.coffee{
-    position: relative;
-    left: 20%;
+.space {
+  margin-top: 100px;
 }
 
-.magcup{
-    position: absolute;
-    width: 70%;
-    max-width:600px;
+.bar-back{
+  width: 90%;
+  margin: 1em;
+  color: white;
+  padding: 0.25em;
+  animation: bar-animation 1 2s;
+  background: #0091ea;
+  text-align: center;
 }
 
-.hamon{
-    position: absolute;
-    animation: yurayura 8s infinite;
-    width: 70%;
-    max-width:600px;
+.bar-front{
+  width: 90%;
+  margin: 1em;
+  color: white;
+  padding: 0.25em;
+  animation: bar-animation 1 2s;
+  background: #f4a460;
+  text-align: center;
 }
 
-@keyframes yurayura{
-    25% {
-        transform: scaleX(0.9);
-    }
-    75% {
-        transform: scaleX(1.1);
-    }
+.bar1{
+  max-width: 90%;
+  margin-top: 1px;
+}
+
+.bar2{
+  max-width: 80%;
+  margin-top: 1px;
+}
+
+.bar3{
+  max-width: 70%;
+  margin-top: 1px;
+}
+
+.bar4{
+  max-width: 60%;
+  margin-top: 1px;
+}
+
+@keyframes bar-animation{
+  0%{
+    width: 0px;
+  }
+  100%{
+    width: 100%;
+  }
+}
+
+.fortune {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#fortune-result {
+  width: 280px;
+  height: 280px;
+  border: 1px solid gray;
+  margin: 10px auto;
+}
+
+.result-image {
+  width: 100%;
+  height: 100%;
+  animation: puyopuyo 1s ease-in-out 1 forwards;
+}
+
+@keyframes puyopuyo {
+  0%  {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  15% {
+    transform: scale(0.98, 0.9) translate(0, 5px);
+  }
+  30% {
+    transform: scale(1.02, 1.0) translate(0, 8px);
+  }
+  50% {transform: scale(0.98, 1.05) translate(0, -8px);
+  }
+  70% {
+    transform: scale(1.0, 0.9) translate(0, 5px);
+  }
+  100% {
+    transform: scale(1.0, 1.0) translate(0, 0);
+  }
+  0%, 100% {
+    opacity: 1;
+  }
+}
+
+#start-btn {
+  display: block;
+  cursor: pointer;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #232323;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px auto;
 }
