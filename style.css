@@ -99,7 +99,6 @@ hr {
 }
 
 .party-gradient {
-  display: inline-block;
   background: linear-gradient(180deg, #00a1e9 0%, #3cb37a 50%, #fff352 100%);
   background: -webkit-linear-gradient(-90deg, #00a1e9 0%, #3cb37a 50%, #fff352 100%);
   -webkit-background-clip: text;
